@@ -15,7 +15,7 @@ export class TeamStandingsComponent implements OnInit {
   ngOnInit() {
     const teamInfo: { id: number, name: string } = { 'id': 1, 'name': 'barca'};
     const standingsInfo: { team: Team, position: number, points: number, goalDifference: number }[] = [
-    { 'team': new Team(teamInfo), 'position': 0, 'points': 10, 'goalDifference': 20 }
+    { 'team': new Team(teamInfo), 'position': 1, 'points': 10, 'goalDifference': 20 }
     ];
     this.standings.push(new TeamStanding(standingsInfo[0]));
   }

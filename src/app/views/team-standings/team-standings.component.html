@@ -1,6 +1,21 @@
-<p>
-  team-standings works!
-  Team: {{standings[0].team.name}}
-  Position: {{standings[0].position}}
-  Points: {{standings[0].points}}
-</p>
+<h3>
+  Season Standings
+</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Team</th>
+			<th>Points</th>
+			<th>Goal Difference</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">{{standings[0].position}}</th>
+			<td>{{standings[0].team.name}}</td>
+			<td>{{standings[0].points}}</td>
+			<td>{{standings[0].goalDifference}}</td>
+		</tr>
+	</tbody>
+</table>
