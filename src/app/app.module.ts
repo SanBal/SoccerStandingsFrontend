@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/base/header/header.component';
 import { HomeComponent } from './views/base/home/home.component';
 import { SoccerStandingsComponent } from './views/soccer-standings/soccer-standings.component';
+
+import { SeasonService } from './services/season.service';
 
 
 @NgModule({
@@ -18,9 +21,10 @@ import { SoccerStandingsComponent } from './views/soccer-standings/soccer-standi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SeasonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

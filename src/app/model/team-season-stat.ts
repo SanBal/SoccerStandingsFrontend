@@ -5,8 +5,8 @@ export class TeamSeasonStat {
   points: number;
   goalDifference: number;
 
-  constructor(teamStandingInfo: any) {
-    this.team = teamStandingInfo.team;
+  constructor(team: Team, teamStandingInfo: any) {
+    this.team = team;
     this.position = teamStandingInfo.position;
     this.points = teamStandingInfo.points;
     this.goalDifference = teamStandingInfo.goalDifference;
