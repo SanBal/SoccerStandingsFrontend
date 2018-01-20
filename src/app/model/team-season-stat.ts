@@ -1,5 +1,5 @@
 import { Team } from './team';
-export class TeamStanding {
+export class TeamSeasonStat {
   team: Team;
   position: number;
   points: number;
