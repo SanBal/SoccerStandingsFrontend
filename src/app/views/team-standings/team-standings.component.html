@@ -11,11 +11,11 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<th scope="row">{{standings[0].position}}</th>
-			<td>{{standings[0].team.name}}</td>
-			<td>{{standings[0].points}}</td>
-			<td>{{standings[0].goalDifference}}</td>
+		<tr *ngFor="let standing of standings; let i = index">
+			<th scope="row">{{i + 1}}</th>
+			<td>{{standing.team.name}}</td>
+			<td>{{standing.points}}</td>
+			<td>{{standing.goalDifference}}</td>
 		</tr>
 	</tbody>
 </table>

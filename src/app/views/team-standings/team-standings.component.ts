@@ -13,10 +13,12 @@ export class TeamStandingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const teamInfo: { id: number, name: string } = { 'id': 1, 'name': 'barca'};
+    const teamsInfo: { id: number, name: string }[] = [{ 'id': 1, 'name': 'barca'}, { 'id': 2, 'name': 'athletico'} ];
     const standingsInfo: { team: Team, position: number, points: number, goalDifference: number }[] = [
-    { 'team': new Team(teamInfo), 'position': 1, 'points': 10, 'goalDifference': 20 }
+    { 'team': new Team(teamsInfo[0]), 'position': 1, 'points': 10, 'goalDifference': 20 },
+    { 'team': new Team(teamsInfo[1]), 'position': 2, 'points': 5, 'goalDifference': 10 }
     ];
     this.standings.push(new TeamStanding(standingsInfo[0]));
+    this.standings.push(new TeamStanding(standingsInfo[1]));
   }
 }
