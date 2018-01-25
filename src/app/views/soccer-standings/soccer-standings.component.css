@@ -1,8 +1,18 @@
+.title {
+	text-align: center;
+}
+
 img {
-	width: 45px;
-	height: 60px;
+	width: 25px;
+	height: 35px;
 }
 
 .crest-delimiter-name {
-	margin-left: 30px;
+	margin-left: 5px;
+}
+
+/* Centers the text of a table header/data cell horizontally and vertically*/
+.tcell-text {
+	text-align: center;
+	vertical-align: middle;
 }

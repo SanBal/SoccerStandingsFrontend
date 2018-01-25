@@ -1,21 +1,33 @@
-<h3>
+<h3 class="title">
   Season Standings
 </h3>
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>#</th>
-			<th>Team</th>
-			<th>Points</th>
-			<th>Goal Difference</th>
+			<th class="col-md-1">#</th>
+			<th class="col-md-2">Team</th>
+			<th class="col-md-1 tcell-text"># Matches</th>
+			<th class="col-md-1 tcell-text">Points</th>
+			<th class="col-md-1 tcell-text">Wins</th>
+			<th class="col-md-1 tcell-text ">Losses</th>
+			<th class="col-md-1 tcell-text">Draws</th>
+			<th class="col-md-1 tcell-text">Goal Difference</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr *ngFor="let stat of stats; let i = index">
 			<th scope="row">{{i + 1}}</th>
-			<td><img src="{{stat.team.crestURI}}"><span class="crest-delimiter-name">&nbsp;</span>{{stat.team.name}}</td>
-			<td>{{stat.points}}</td>
-			<td>{{stat.goalDifference}}</td>
+			<td>
+				<img src="{{stat.team.crestURI}}">
+				<span class="crest-delimiter-name">&nbsp;</span>
+				<span>{{stat.team.name}}</span>
+			</td>
+			<td class="tcell-text">{{stat.numMatches}}</td>
+			<td class="tcell-text">{{stat.points}}</td>
+			<td class="tcell-text">{{stat.wins}}</td>
+			<td class="tcell-text">{{stat.losses}}</td>
+			<td class="tcell-text">{{stat.draws}}</td>
+			<td class="tcell-text">{{stat.goalDifference}}</td>
 		</tr>
 	</tbody>
 </table>
