@@ -13,7 +13,7 @@
 	<tbody>
 		<tr *ngFor="let stat of stats; let i = index">
 			<th scope="row">{{i + 1}}</th>
-			<td>{{stat.team.name}}</td>
+			<td><img src="{{stat.team.crestURI}}"><span class="crest-delimiter-name">&nbsp;</span>{{stat.team.name}}</td>
 			<td>{{stat.points}}</td>
 			<td>{{stat.goalDifference}}</td>
 		</tr>

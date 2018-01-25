@@ -12,7 +12,7 @@ export class SeasonService {
   constructor(private http: HttpClient) {}
 
   getTeamSeasonStats() {
-    console.log('Service');
+    console.log('Season Service:');
     const headers = new HttpHeaders().set('X-Auth-Token', 'd4bcc5971ac24789addad53e8e1a968d');
     this.http.get('http://api.football-data.org//v1/competitions/455/leagueTable', {headers})
       .subscribe(resp => {
