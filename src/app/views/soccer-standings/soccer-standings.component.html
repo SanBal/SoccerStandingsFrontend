@@ -20,7 +20,7 @@
 			<td>
 				<img src="{{stat.team.crestURI}}">
 				<span class="crest-delimiter-name">&nbsp;</span>
-				<span>{{stat.team.name}}</span>
+				<span><a [routerLink]="['/laliga/teams', stat.team.id]">{{stat.team.name}}</a></span>
 			</td>
 			<td class="tcell-text">{{stat.numMatches}}</td>
 			<td class="tcell-text">{{stat.points}}</td>

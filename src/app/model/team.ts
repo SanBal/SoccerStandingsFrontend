@@ -3,9 +3,9 @@ export class Team {
   name: string;
   crestURI: string;
 
-  constructor(id: number, teamInfo: any) {
+  constructor(id: number, teamInfos: any) {
     this.id = id;
-    this.name = teamInfo.teamName;
-    this.crestURI = teamInfo.crestURI;
+    this.name = teamInfos.teamName;
+    this.crestURI = teamInfos.crestURI;
   }
 }

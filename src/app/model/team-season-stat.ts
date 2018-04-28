@@ -9,14 +9,14 @@ export class TeamSeasonStat {
   draws: number;
   goalDifference: number;
 
-  constructor(team: Team, teamStandingInfo: any) {
+  constructor(team: Team, teamStandingInfos: any) {
     this.team = team;
-    this.position = teamStandingInfo.position;
-    this.numMatches = teamStandingInfo.playedGames;
-    this.points = teamStandingInfo.points;
-    this.wins = teamStandingInfo.wins;
-    this.losses = teamStandingInfo.losses;
-    this.draws = teamStandingInfo.draws;
-    this.goalDifference = teamStandingInfo.goalDifference;
+    this.position = teamStandingInfos.position;
+    this.numMatches = teamStandingInfos.playedGames;
+    this.points = teamStandingInfos.points;
+    this.wins = teamStandingInfos.wins;
+    this.losses = teamStandingInfos.losses;
+    this.draws = teamStandingInfos.draws;
+    this.goalDifference = teamStandingInfos.goalDifference;
   }
 }
