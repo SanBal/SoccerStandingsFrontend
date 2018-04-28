@@ -10,6 +10,7 @@ import { HomeComponent } from './views/base/home/home.component';
 import { SoccerStandingsComponent } from './views/soccer-standings/soccer-standings.component';
 
 import { SeasonService } from './services/season.service';
+import { TeamInfosComponent } from './views/team-infos/team-infos.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SeasonService } from './services/season.service';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SoccerStandingsComponent
+    SoccerStandingsComponent,
+    TeamInfosComponent
   ],
   imports: [
     BrowserModule,
