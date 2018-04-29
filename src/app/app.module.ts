@@ -11,6 +11,7 @@ import { SoccerStandingsComponent } from './views/soccer-standings/soccer-standi
 
 import { SeasonService } from './services/season.service';
 import { TeamInfosComponent } from './views/team-infos/team-infos.component';
+import { PageNotFoundComponent } from './views/errors/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { TeamInfosComponent } from './views/team-infos/team-infos.component';
     HeaderComponent,
     HomeComponent,
     SoccerStandingsComponent,
-    TeamInfosComponent
+    TeamInfosComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
