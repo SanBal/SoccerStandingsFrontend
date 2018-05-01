@@ -1,6 +1,6 @@
-import {Team} from '../../model/team';
-import {TeamSeasonStat} from '../../model/team-season-stat';
-import {SeasonService} from '../../services/season.service';
+import {Team} from '../../../model/team';
+import {TeamSeasonStat} from '../../../model/team-season-stat';
+import {SeasonService} from '../../../services/season.service';
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 

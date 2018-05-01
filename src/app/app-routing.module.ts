@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/base/home/home.component';
 import { PageNotFoundComponent } from './views/errors/page-not-found/page-not-found.component';
-import { SoccerStandingsComponent } from './views/soccer-standings/soccer-standings.component';
-import { TeamInfosComponent } from './views/team-infos/team-infos.component';
+import { SoccerStandingsComponent } from './views/core/soccer-standings/soccer-standings.component';
+import { TeamInfosComponent } from './views/core/team-infos/team-infos.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
