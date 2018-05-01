@@ -1,7 +1,8 @@
 <h3 class="title">
   Season Standings
 </h3>
-<table class="table table-striped">
+<i class="fas fa-circle-notch fa-spin" *ngIf="loading"></i>
+<table class="table table-striped" *ngIf="!loading">
 	<thead>
 		<tr>
 			<th class="col-md-1">#</th>
@@ -15,19 +16,19 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let stat of stats; let i = index">
+		<tr *ngFor="let teamSeasonStat of teamSeasonStats; let i = index">
 			<th class="tcell-position-text" scope="row">{{i + 1}}</th>
 			<td>
-				<img src="{{stat.team.crestURI}}">
+				<img src="{{teamSeasonStat.team.crestURI}}">
 				<span class="crest-delimiter-name">&nbsp;</span>
-				<span><a [routerLink]="['/laliga/teams', stat.team.id]">{{stat.team.name}}</a></span>
+				<span><a [routerLink]="['/laliga/teams', teamSeasonStat.team.id]">{{teamSeasonStat.team.name}}</a></span>
 			</td>
-			<td class="tcell-text">{{stat.numMatches}}</td>
-			<td class="tcell-text">{{stat.points}}</td>
-			<td class="tcell-text">{{stat.wins}}</td>
-			<td class="tcell-text">{{stat.losses}}</td>
-			<td class="tcell-text">{{stat.draws}}</td>
-			<td class="tcell-text">{{stat.goalDifference}}</td>
+			<td class="tcell-text">{{teamSeasonStat.numMatches}}</td>
+			<td class="tcell-text">{{teamSeasonStat.points}}</td>
+			<td class="tcell-text">{{teamSeasonStat.wins}}</td>
+			<td class="tcell-text">{{teamSeasonStat.losses}}</td>
+			<td class="tcell-text">{{teamSeasonStat.draws}}</td>
+			<td class="tcell-text">{{teamSeasonStat.goalDifference}}</td>
 		</tr>
 	</tbody>
 </table>
