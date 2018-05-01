@@ -1,0 +1,21 @@
+.login-container {
+		/* Centralize text of all elements of in this div */
+		text-align:center;
+		
+		margin-top: 10%;
+		margin-left:38%;
+		width: 400px;
+		height: 200px;
+}
+
+#form-login-btn {
+	margin-top: 2%;
+}
+
+/* Define properties for different devices/screen widths */
+@media screen and (max-width:1000px) {
+	.login-container {
+		margin-top: 18%;
+		margin-left:25%;
+	}
+}

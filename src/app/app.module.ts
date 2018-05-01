@@ -12,6 +12,7 @@ import { SoccerStandingsComponent } from './views/core/soccer-standings/soccer-s
 import { SeasonService } from './services/season.service';
 import { TeamInfosComponent } from './views/core/team-infos/team-infos.component';
 import { PageNotFoundComponent } from './views/errors/page-not-found/page-not-found.component';
+import { LoginComponent } from './views/core/login/login.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PageNotFoundComponent } from './views/errors/page-not-found/page-not-fo
     HomeComponent,
     SoccerStandingsComponent,
     TeamInfosComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
