@@ -1,0 +1,11 @@
+<div class="login-container">
+	<form class="form-login">
+		<h2 class="form-login-heading">Please Login</h2>
+		<!-- bootstrap classes for input fields and button -->
+		<input id="form-username" type="text" class="form-control" placeholder="Username" #username name="username">
+		<input id="form-password" type="password" class="form-control" #password placeholder="Password">
+		<button id="form-login-btn" type="submit" class="btn btn-lg btn-primary btn-block" (click)="submit(username.value, password.value)">
+			Login
+		</button>
+	</form>
+</div>

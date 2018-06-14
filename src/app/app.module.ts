@@ -1,18 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './views/base/header/header.component';
-import { HomeComponent } from './views/base/home/home.component';
-import { SoccerStandingsComponent } from './views/core/soccer-standings/soccer-standings.component';
+import {AppComponent} from './app.component';
+import {AuthenticationService} from './services/authentication.service';
+import {HeaderComponent} from './pages/base/header/header.component';
+import {HomeComponent} from './pages/base/home/home.component';
+import {SoccerStandingsComponent} from './pages/core/soccer-standings/soccer-standings.component';
 
-import { SeasonService } from './services/season.service';
-import { TeamInfosComponent } from './views/core/team-infos/team-infos.component';
-import { PageNotFoundComponent } from './views/errors/page-not-found/page-not-found.component';
-import { LoginComponent } from './views/core/login/login.component';
+import {SeasonService} from './services/season.service';
+import {TeamInfosComponent} from './pages/core/team-infos/team-infos.component';
+import {PageNotFoundComponent} from './pages/errors/page-not-found/page-not-found.component';
+import {LoginComponent} from './pages/core/login/login.component';
+
+import {FormsModule} from '@angular/forms';
+import { PagesComponent } from './pages/pages.component';
 
 
 @NgModule({
@@ -23,14 +27,16 @@ import { LoginComponent } from './views/core/login/login.component';
     SoccerStandingsComponent,
     TeamInfosComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [SeasonService],
+  providers: [SeasonService, AuthenticationService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

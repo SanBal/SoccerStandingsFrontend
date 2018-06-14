@@ -2,8 +2,7 @@
 		/* Centralize text of all elements of in this div */
 		text-align:center;
 		
-		margin-top: 10%;
-		margin-left:38%;
+		margin: 10% 0 0 38%;
 		width: 400px;
 		height: 200px;
 }
@@ -15,7 +14,6 @@
 /* Define properties for different devices/screen widths */
 @media screen and (max-width:1000px) {
 	.login-container {
-		margin-top: 18%;
-		margin-left:25%;
+		margin: 18% 0 0 25%;
 	}
 }
