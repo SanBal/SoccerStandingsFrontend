@@ -10,7 +10,7 @@ import {HeaderComponent} from './pages/base/header/header.component';
 import {HomeComponent} from './pages/base/home/home.component';
 import {SoccerStandingsComponent} from './pages/core/soccer-standings/soccer-standings.component';
 
-import {SeasonService} from './services/season.service';
+import {SoccerService} from './services/soccer.service';
 import {TeamInfosComponent} from './pages/core/team-infos/team-infos.component';
 import {PageNotFoundComponent} from './pages/errors/page-not-found/page-not-found.component';
 import {LoginComponent} from './pages/core/login/login.component';
@@ -36,7 +36,7 @@ import { PagesComponent } from './pages/pages.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [SeasonService, AuthenticationService],
+  providers: [SoccerService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

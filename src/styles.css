@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+i.spinner {
+	color: #1976D2;
+	font-size: 40px;
+	margin-top: 15%;
+	margin-left: 50%;
+}

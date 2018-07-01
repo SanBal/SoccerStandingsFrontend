@@ -1,3 +1,5 @@
-<p>
-  team-infos works!
-</p>
+<h3 class="title" *ngIf="!loading">
+  <img src="{{team.crestURI}}"><span class="crest-delimiter-name">&nbsp;</span>{{team.name}}
+</h3>
+<i class="fas fa-circle-notch fa-spin spinner" *ngIf="loading"></i>
+

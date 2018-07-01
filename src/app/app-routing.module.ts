@@ -14,7 +14,10 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'laliga', component: SoccerStandingsComponent},
       {path: 'laliga/teams/:id', component: TeamInfosComponent},
+
+      // TODO redirectTo '/login' (to one of the parent routes
       {path: '', redirectTo: 'home', pathMatch: 'prefix'}, // e.g. empty prefix -> http://localhost:4200/____
+
       {path: 'page-not-found', component: PageNotFoundComponent},
       {path: '**', redirectTo: 'page-not-found'} // Any paths which don't match the previous defined routes
     ]

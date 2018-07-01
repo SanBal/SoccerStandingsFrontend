@@ -1,6 +1,6 @@
 import {Team} from '../../../model/team';
 import {TeamSeasonStat} from '../../../model/team-season-stat';
-import {SeasonService} from '../../../services/season.service';
+import {SoccerService} from '../../../services/soccer.service';
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
@@ -11,21 +11,22 @@ import {Router} from '@angular/router';
 })
 export class SoccerStandingsComponent implements OnInit {
 
-  private loading = false;
+  loading = true;
   teamSeasonStats: TeamSeasonStat[] = [];
-  constructor(private seasonService: SeasonService, private router: Router) {}
+  constructor(private seasonService: SoccerService, private router: Router) {}
 
   ngOnInit() {
     const useMockObjects = false;
     if (useMockObjects) {
       this.setMockObjects();
     } else {
-      this.loading = true;
 
       // Consume promise of Season Service
       this.seasonService.getPromiseTeamSeasonStats()
         .then(teamSeasonStats => {
           this.teamSeasonStats = teamSeasonStats;
+          console.log('TeamSeasonStats:');
+          console.log(this.teamSeasonStats);
           this.loading = false;
         }).catch(error => {
           console.log(error);
@@ -34,8 +35,6 @@ export class SoccerStandingsComponent implements OnInit {
           }, 5000);
         });
     }
-    console.log('TeamSeasonStats:');
-    console.log(this.teamSeasonStats);
   }
 
   setMockObjects() {
@@ -44,7 +43,7 @@ export class SoccerStandingsComponent implements OnInit {
       {'position': 1, 'points': 10, 'goalDifference': 20},
       {'position': 2, 'points': 5, 'goalDifference': 10}
     ];
-    this.teamSeasonStats.push(new TeamSeasonStat(new Team(1, teamsInfo[0]), standingsInfo[0]));
-    this.teamSeasonStats.push(new TeamSeasonStat(new Team(2, teamsInfo[1]), standingsInfo[1]));
+    this.teamSeasonStats.push(new TeamSeasonStat(new Team(1, teamsInfo[0].teamName), standingsInfo[0]));
+    this.teamSeasonStats.push(new TeamSeasonStat(new Team(2, teamsInfo[1].teamName), standingsInfo[1]));
   }
 }
